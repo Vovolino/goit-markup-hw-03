@@ -64,7 +64,6 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
-    padding-bottom: 32px;
 
 }
 
@@ -73,6 +72,7 @@ img {
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
+    border-bottom: 1px solid --border-color;
 }
 
 .header-container {
@@ -147,14 +147,38 @@ img {
     color: var(--hover-color);
 }
 
-/* hero */
-.hero {
+/* main-portfolio */
+
+.main {
+    padding-top: 96px;
     padding-bottom: 120px;
 }
 
-.hero-container {
-    background-color: var(--title-color);
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.products-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.link-menu {
+    padding: 32px 16px;
+    border: 1px solid --border-color;
+    border-top: none;
+}
+
+/* hero */
+
+.hero {
     padding: 188px 0;
+    background-color: var(--title-color);
+}
+
+.hero-container {
     width: 1440px;
 }
 
@@ -203,14 +227,8 @@ img {
     display: flex;
     gap: 24px;
     justify-content: center;
-    margin-top: 96px;
     margin-bottom: 72px;
-
-
-
 }
-
-.filters-menu-item {}
 
 .filters-btn {
     font-family: "Roboto", sans-serif;
@@ -230,23 +248,13 @@ img {
 .filters-btn:focus {
     background-color: var(--hover-color);
     color: var(--second-text-color);
+    border: 1px solid transparent;
 }
 
-/* projects */
-
-.projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-.projects-item {
-    padding-bottom: 48px;
-}
 
 /* benefits */
 .benefits {
-    padding-bottom: 120px;
+    padding: 120px 0;
 }
 
 .benefits-list {
@@ -254,10 +262,21 @@ img {
     gap: 24px;
 }
 
-
-
 .benefits-item {
     width: calc((100% - 72px) / 4);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* products */
@@ -281,8 +300,6 @@ img {
     gap: 24px;
 }
 
-.list {}
-
 .products-item {
     width: calc((100% - 24px * 2) / 3);
 }
@@ -302,7 +319,6 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-
     margin-bottom: 72px;
 }
 
@@ -340,12 +356,13 @@ img {
     letter-spacing: 0.03em;
     color: var(--logo-color);
     text-transform: uppercase;
-
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-logo span {
     color: var(--button-color);
-    ;
+
 }
 
 .footer-text {
@@ -354,5 +371,4 @@ img {
     letter-spacing: 0.02em;
     color: var(--button-color);
     width: 264px;
-    padding-top: 16px;
 }
