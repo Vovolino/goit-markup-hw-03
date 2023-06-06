@@ -5,6 +5,7 @@
     --logo-color: #4d5ae5;
     --button-color: #F4F4FD;
     --hover-color: #404BBF;
+    --border-color: #E7E9FC
 }
 
 body {
@@ -222,7 +223,7 @@ img {
     color: var(--logo-color);
     background-color: var(--button-color);
     cursor: pointer;
-    border: 1px solid #E7E9FC;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 12px 24px;
 }
